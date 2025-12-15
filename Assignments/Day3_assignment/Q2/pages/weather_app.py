@@ -1,7 +1,11 @@
 import requests
 import streamlit as st
+from dotenv import load_dotenv
+import os
 
-API_KEY="54e50cf96ff11b09bc82293e5f28c506"
+load_dotenv()
+API_KEY = os.getenv("WEATHER_API")
+
 base_url=f"https://api.openweathermap.org/data/2.5/weather"
 
 def weather_info(city):
